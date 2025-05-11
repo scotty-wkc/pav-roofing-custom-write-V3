@@ -316,13 +316,21 @@ footer a:hover {
   background-color: var(--light-bg);
 }
 
+/* Project gallery styles */
 .project-item {
-  margin-bottom: 30px;
   position: relative;
   overflow: hidden;
+  width: 100%; /* Ensures the card takes up the full column width */
+  height: 300px; /* Set a fixed height for all cards */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .project-img {
+  width: 100%; /* Ensures the image fills the card horizontally */
+  height: 100%; /* Ensures the image fills the card vertically */
+  object-fit: cover; /* Ensures the image scales properly without distortion */
   transition: transform 0.5s;
 }
 
@@ -345,7 +353,7 @@ footer a:hover {
 }
 
 .project-item:hover .project-img {
-  transform: scale(1.1);
+  transform: scale(1.1); /* Slight zoom effect on hover */
 }
 
 /* Responsive adjustments */

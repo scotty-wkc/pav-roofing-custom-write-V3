@@ -15,6 +15,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="../css-files/styles.css" />
+    <link rel="stylesheet" href="../css-files/nav.css" />
     <link
       rel="icon"
       type="image/png"
@@ -67,78 +68,9 @@
     </div>
 
     <!-- Header/Navigation -->
-    <header class="sticky-top" style="background-color: var(--secondary-color)">
-      <div class="container">
-        <nav class="navbar navbar-expand-lg main-nav">
-          <a class="navbar-brand d-flex align-items-center" href="#">
-            <img
-              src="../assets/transparent-logo-removebg-lite.png"
-              alt="Pav's Roofing Solutions Logo"
-              class="logo me-2"
-            />
-            <p id="navCompanyTitle" class="mb-0">
-              Pav's <span>Roofing Solutions</span>
-            </p>
-          </a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-              <li class="nav-item">
-                <a class="nav-link active" href="#">Home</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a
-                  class="nav-link dropdown-toggle"
-                  href="#"
-                  id="servicesDropdown"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                >
-                  Services
-                </a>
-                <ul class="dropdown-menu">
-                  <li>
-                    <a class="dropdown-item" href="#">Residential Roofing</a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="#">Roof Replacement</a>
-                  </li>
-                  <li><a class="dropdown-item" href="#">Roof Repairs</a></li>
-                  <li>
-                    <a class="dropdown-item" href="#">Commercial Roofing</a>
-                  </li>
-                  <li><a class="dropdown-item" href="#">Metal Roofing</a></li>
-                </ul>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">About Us</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Projects</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Gallery</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Blog</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Contact</a>
-              </li>
-              <li class="nav-item">
-                <a class="btn btn-primary ms-lg-3" href="#">Get A Quote</a>
-              </li>
-            </ul>
-          </div>
-        </nav>
-      </div>
+    <!-- <header class="sticky-top" style="background-color: var(--secondary-color)"> -->
+    <header class="sticky-top">
+      <div id="navbar-placeholder"></div>
     </header>
 
     <!-- Hero Section -->
@@ -308,7 +240,7 @@
         <div class="row align-items-center">
           <div class="col-lg-6 mb-4 mb-lg-0">
             <img
-              src="/api/placeholder/600/400"
+              src="../assets/ai-team.png"
               alt="About PRS Roofing"
               class="img-fluid"
             />
@@ -441,7 +373,7 @@
           <div class="col-md-4">
             <div class="project-item">
               <img
-                src="/api/placeholder/400/300"
+                src="../assets/commercial-project.png"
                 alt="Commercial Roofing Project"
                 class="img-fluid project-img"
               />
@@ -459,7 +391,7 @@
           <div class="col-md-4">
             <div class="project-item">
               <img
-                src="/api/placeholder/400/300"
+                src="../assets/residential-project.png"
                 alt="Residential Roofing Project"
                 class="img-fluid project-img"
               />
@@ -477,7 +409,7 @@
           <div class="col-md-4">
             <div class="project-item">
               <img
-                src="/api/placeholder/400/300"
+                src="../assets/metal-project.png"
                 alt="Metal Roofing Project"
                 class="img-fluid project-img"
               />
@@ -628,5 +560,6 @@
     <!-- Bootstrap JS and dependencies -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
     <script src="../js-files/index.js"></script>
+    <script src="../js-files/nav.js"></script>
   </body>
 </html>
