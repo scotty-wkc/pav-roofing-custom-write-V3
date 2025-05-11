@@ -1,6 +1,6 @@
-Roofing ProtoV3
+<h1>>Roofing ProtoV3</h1>
 
-Viewable here -> https://github.com/scotty-wkc/roofing-protoV3.git
+Viewable here -> https://scotty-wkc.github.io/roofing-protoV3/
 
 Welcome to Roofing ProtoV3! This project is the third version of a roofing website, built using HTML, CSS, JavaScript, and the Bootstrap framework. This version introduces new features, better performance, and an improved user experience.
 
