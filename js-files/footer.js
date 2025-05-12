@@ -13,18 +13,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (footerPlaceholder) {
     // For GitHub Pages, include the repository name in the path
-    fetch("/js-files/footer.html")
+    fetch("/html-files/footer.html")
       .then(response => {
         if (!response.ok) {
           // Try a relative path as fallback
-          return fetch("./js-files/footer.html");
+          return fetch("./html-files/footer.html");
         }
         return response;
       })
       .then(response => {
         if (!response.ok) {
           // Try another relative path as a secondary fallback
-          return fetch("../js-files/footer.html");
+          return fetch("../html-files/footer.html");
         }
         return response;
       })
