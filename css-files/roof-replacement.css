@@ -1,0 +1,357 @@
+/* Roof Replacement Page Styles */
+
+/* Hero section for the page */
+.page-hero {
+  height: 500px;
+  background-image: url('/roofing-protoV3/assets/roof-replacement-hero.jpg');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  color: white;
+}
+
+.page-hero .hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+}
+
+.page-hero .hero-content {
+  max-width: 800px;
+}
+
+.page-hero h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.page-hero p {
+  font-size: 1.25rem;
+  margin-bottom: 30px;
+}
+
+/* Introduction section */
+.intro-section {
+  padding: 80px 0;
+  background-color: var(--white);
+}
+
+.intro-section img {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* When to Replace Section */
+.when-to-replace {
+  padding: 80px 0;
+  background-color: var(--light-bg);
+}
+
+.signs-card {
+  padding: 30px;
+  border: none;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s;
+}
+
+.signs-card:hover {
+  transform: translateY(-10px);
+}
+
+.sign-icon {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+}
+
+.when-to-replace .section-title,
+.process-section .section-title,
+.materials-section .section-title,
+.faq-section .section-title,
+.testimonials .section-title {
+  position: relative;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.when-to-replace .section-title:after,
+.process-section .section-title:after,
+.materials-section .section-title:after,
+.faq-section .section-title:after,
+.testimonials .section-title:after {
+  content: "";
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background-color: var(--primary-color);
+}
+
+/* Process Timeline */
+.process-section {
+  padding: 80px 0;
+  background-color: var(--white);
+}
+
+.process-timeline {
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.process-timeline:before {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 2px;
+  background-color: var(--primary-color);
+  left: 50px;
+  top: 0;
+}
+
+.process-step {
+  position: relative;
+  padding-left: 120px;
+  margin-bottom: 60px;
+}
+
+.process-step:last-child {
+  margin-bottom: 0;
+}
+
+.process-number {
+  position: absolute;
+  left: 30px;
+  top: 0;
+  width: 40px;
+  height: 40px;
+  background-color: var(--primary-color);
+  color: var(--white);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.process-content {
+  background-color: var(--light-bg);
+  padding: 30px;
+  border-radius: 5px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.process-content h4 {
+  color: var(--primary-color);
+  margin-bottom: 15px;
+}
+
+/* Materials Section */
+.materials-section {
+  padding: 80px 0;
+  background-color: var(--light-bg);
+}
+
+.material-card {
+  background-color: var(--white);
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  height: 100%;
+}
+
+.material-img {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.material-info {
+  padding: 20px;
+}
+
+.material-info h4 {
+  color: var(--primary-color);
+  margin-bottom: 15px;
+}
+
+.material-info ul {
+  padding-left: 20px;
+  margin-bottom: 15px;
+}
+
+.material-info ul li {
+  margin-bottom: 8px;
+}
+
+.material-price {
+  font-weight: bold;
+  color: var(--secondary-color);
+}
+
+/* FAQ Section */
+.faq-section {
+  padding: 80px 0;
+  background-color: var(--white);
+}
+
+.accordion-item {
+  border: none;
+  margin-bottom: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.accordion-button {
+  padding: 20px 30px;
+  font-weight: 600;
+  color: var(--secondary-color);
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: var(--primary-color);
+  color: var(--white);
+}
+
+.accordion-button:focus {
+  box-shadow: none;
+  border-color: transparent;
+}
+
+.accordion-button::after {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23A67C52'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+}
+
+.accordion-button:not(.collapsed)::after {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ffffff'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+  transform: rotate(-180deg);
+}
+
+.accordion-body {
+  padding: 20px 30px;
+  color: var(--secondary-color);
+}
+
+/* Recent Projects Section */
+.recent-projects {
+  padding: 80px 0;
+  background-color: var(--light-bg);
+}
+
+/* Testimonials Section - Enhanced */
+.testimonials {
+  padding: 80px 0;
+  background-color: var(--white);
+}
+
+.testimonial-card {
+  padding: 30px;
+  margin-bottom: 30px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  height: 100%;
+  transition: transform 0.3s;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-10px);
+}
+
+/* CTA Section */
+.cta {
+  padding: 80px 0;
+  background-color: var(--primary-color);
+  color: var(--white);
+}
+
+.cta h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.cta p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.btn-light {
+  background-color: var(--white);
+  color: var(--primary-color);
+  border-radius: 0;
+  padding: 12px 30px;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+
+.btn-light:hover {
+  background-color: var(--secondary-color);
+  color: var(--white);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+  .page-hero {
+    height: 400px;
+  }
+  
+  .page-hero h1 {
+    font-size: 2.5rem;
+  }
+  
+  .process-timeline:before {
+    left: 30px;
+  }
+  
+  .process-step {
+    padding-left: 80px;
+  }
+  
+  .process-number {
+    left: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .page-hero {
+    height: 350px;
+  }
+  
+  .page-hero h1 {
+    font-size: 2rem;
+  }
+  
+  .intro-section, 
+  .when-to-replace, 
+  .process-section, 
+  .materials-section, 
+  .faq-section, 
+  .recent-projects, 
+  .testimonials, 
+  .cta {
+    padding: 60px 0;
+  }
+  
+  .process-timeline:before {
+    display: none;
+  }
+  
+  .process-step {
+    padding-left: 0;
+    padding-top: 60px;
+  }
+  
+  .process-number {
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0;
+  }
+}
