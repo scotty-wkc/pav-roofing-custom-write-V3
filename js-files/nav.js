@@ -26,7 +26,19 @@ document.addEventListener("DOMContentLoaded", () => {
       })
       .then(data => {
         navbarPlaceholder.innerHTML = data;
-        
+
+        // Highlight the active link
+        const currentPath = window.location.pathname;
+        const navLinks = document.querySelectorAll(".navbar-nav .nav-link");
+
+        navLinks.forEach(link => {
+          if (link.getAttribute("href") === currentPath) {
+            link.classList.add("active");
+          } else {
+            link.classList.remove("active");
+          }
+        });
+
         // Dispatch a custom event to notify other scripts that the navbar is loaded
         document.dispatchEvent(new CustomEvent('navbarLoaded'));
       })
@@ -38,6 +50,5 @@ document.addEventListener("DOMContentLoaded", () => {
           </div>
         `;
       });
-
   }
 });
