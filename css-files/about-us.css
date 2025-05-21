@@ -2,16 +2,23 @@
 
 /* Page Header */
 .page-header {
-  background-color: var(--secondary-color);
+  /* background-color: var(--secondary-color);
   color: var(--white);
   padding: 50px 0;
-  position: relative;
+  position: relative; */
+    background-color: #f8f9fa;
+  padding: 40px 0;
+  border-bottom: 1px solid #e9ecef;
 }
 
 .page-header h1 {
-  font-size: 2.5rem;
+  /* font-size: 2.5rem;
   font-weight: 700;
-  margin-bottom: 10px;
+  margin-bottom: 10px; */
+    font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #343a40;
 }
 
 /* .breadcrumb {

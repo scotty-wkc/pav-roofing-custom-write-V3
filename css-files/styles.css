@@ -365,6 +365,9 @@ footer a:hover {
   .hero h1 {
       font-size: 2.5rem;
   }
+    .top.social-icons {
+      display: hidden;
+  }
 }
 
 @media (max-width: 768px) {
