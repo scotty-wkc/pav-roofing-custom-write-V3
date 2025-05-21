@@ -375,6 +375,10 @@ footer a:hover {
   .hero h1 {
       font-size: 2rem;
   }
+
+  .top.social-icons {
+      display: hidden;
+  }
   
   .services, .about, .features, .testimonials, .projects, .cta {
       padding: 60px 0;

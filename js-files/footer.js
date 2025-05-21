@@ -30,6 +30,13 @@ document.addEventListener("DOMContentLoaded", () => {
       })
       .then(response => {
         if (!response.ok) {
+          // Try another relative path as a secondary fallback
+          return fetch("../../html-files/footer.html");
+        }
+        return response;
+      })
+      .then(response => {
+        if (!response.ok) {
           throw new Error(`Failed to load footer (status ${response.status})`);
         }
         return response.text();
