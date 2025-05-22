@@ -1,6 +1,6 @@
 // projects.js
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', () => {
   // Initialize project filtering and interaction features
   initProjectsPage();
   
@@ -138,3 +138,7 @@ function initializeFilters() {
     });
   }
 }
+
+document.addEventListener('shown.bs.collapse', function () {
+  history.replaceState(null, '', window.location.pathname);
+});
