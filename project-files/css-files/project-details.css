@@ -75,7 +75,7 @@
 .project-info-card {
   background-color: #f8f9fa;
   border-radius: 8px;
-  padding: 25px;
+  padding: 5px 25px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   /* height: 100%; */
 }
