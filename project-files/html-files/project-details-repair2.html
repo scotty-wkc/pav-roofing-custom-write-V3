@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tile Replacement Project | Pav's Roofing Solutions</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../css-files/styles.css" />
+    <link rel="stylesheet" href="../../css-files/nav.css" />
+    <link rel="stylesheet" href="../css-files/project-details.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="../../assets/transparent-logo-removebg-lite.png"
+    />
+    <link
+      rel="shortcut icon"
+      href="../../assets/transparent-logo-removebg-lite.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="../../assets/transparent-logo-removebg-lite.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../../assets/transparent-logo-removebg-lite.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="../../assets/transparent-logo-removebg-lite.png"
+    />
+    <base href="roofing-protoV3" />
+  </head>
+  <body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8">
+            <i class="fas fa-phone-alt me-2"></i>
+            <a href="tel:0412345678">0412 345 678</a>
+            <span class="mx-3">|</span>
+            <i class="fas fa-envelope me-2"></i>
+            <a href="mailto:info@pavsroofing.com.au">info@pavsroofing.com.au</a>
+          </div>
+          <div class="col-md-4 text-md-end">
+            <div class="social-icons top-social-icons">
+              <a href="https://www.facebook.com/pavsroofing"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a href="https://www.instagram.com/pavsroofing"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="https://www.linkedin.com/company/pavsroofing"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Header/Navigation -->
+    <header class="sticky-top">
+      <div id="navbar-placeholder"></div>
+    </header>
+
+    <!-- Project Detail Header -->
+    <section class="project-detail-header">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <h1>Tile Replacement</h1>
+            <div class="project-meta">
+              <span><i class="fas fa-map-marker-alt"></i> Penrith, NSW</span>
+              <span
+                ><i class="fas fa-calendar-alt"></i> Completed: July 2023</span
+              >
+              <span><i class="fas fa-clock"></i> Duration: 3 Days</span>
+              <span><i class="fas fa-tag"></i> Category: Roof Repairs</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Project Gallery -->
+    <section class="project-gallery">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-8">
+            <div
+              id="projectCarousel"
+              class="carousel slide"
+              data-bs-ride="carousel"
+            >
+              <div class="carousel-indicators">
+                <button
+                  type="button"
+                  data-bs-target="#projectCarousel"
+                  data-bs-slide-to="0"
+                  class="active"
+                  aria-current="true"
+                  aria-label="Slide 1"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#projectCarousel"
+                  data-bs-slide-to="1"
+                  aria-label="Slide 2"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#projectCarousel"
+                  data-bs-slide-to="2"
+                  aria-label="Slide 3"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#projectCarousel"
+                  data-bs-slide-to="3"
+                  aria-label="Slide 4"
+                ></button>
+              </div>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img
+                    src="../../assets/broken-roof-tiles.jpg"
+                    class="d-block w-100"
+                    alt="Hail Damaged Tiles"
+                  />
+                  <div class="carousel-caption d-none d-md-block">
+                    <h5>Hail Damage Assessment</h5>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="../../assets/broken-roof-tiles.jpg"
+                    class="d-block w-100"
+                    alt="Tile Removal Process"
+                  />
+                  <div class="carousel-caption d-none d-md-block">
+                    <h5>Damaged Tile Removal</h5>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="../../assets/broken-roof-tiles.jpg"
+                    class="d-block w-100"
+                    alt="New Tiles Installation"
+                  />
+                  <div class="carousel-caption d-none d-md-block">
+                    <h5>New Tiles Installation</h5>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="../../assets/broken-roof-tiles.jpg"
+                    class="d-block w-100"
+                    alt="Completed Repair"
+                  />
+                  <div class="carousel-caption d-none d-md-block">
+                    <h5>Seamless Integration</h5>
+                  </div>
+                </div>
+              </div>
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#projectCarousel"
+                data-bs-slide="prev"
+              >
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#projectCarousel"
+                data-bs-slide="next"
+              >
+                <span
+                  class="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="project-info-card">
+              <h3>Project Overview</h3>
+              <p>
+                Comprehensive tile replacement after severe hail damage in
+                Penrith. The homeowners' roof suffered significant damage during
+                a severe weather event, requiring extensive tile replacement
+                while maintaining the existing roof's appearance and integrity.
+              </p>
+
+              <h4>Services Provided</h4>
+              <ul>
+                <li>Comprehensive damage assessment</li>
+                <li>Insurance documentation assistance</li>
+                <li>Matching tile sourcing and procurement</li>
+                <li>Damaged tile removal and disposal</li>
+                <li>Precision tile installation</li>
+                <li>Quality assurance inspection</li>
+              </ul>
+
+              <!-- <div class="cta-box">
+                <h4>Need Tile Replacement?</h4>
+                <p>
+                  Contact us for expert tile matching and professional
+                  installation.
+                </p>
+                <a
+                  href="/roofing-protoV3/html-files/quote.html"
+                  class="btn btn-primary w-100"
+                  >Get A Quote</a
+                >
+              </div> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Project Details Content -->
+    <section class="project-details">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8">
+            <!-- Challenge -->
+            <div class="detail-section">
+              <h3>
+                <i class="fas fa-exclamation-triangle me-2"></i> The Challenge
+              </h3>
+              <p>
+                Following a severe hailstorm that hit the Penrith area, the
+                homeowners contacted us after discovering extensive damage to
+                their concrete tile roof:
+              </p>
+              <ul>
+                <li>
+                  Over 40% of roof tiles were cracked, chipped, or completely
+                  broken from large hailstones
+                </li>
+                <li>
+                  Multiple areas where broken tiles had created potential leak
+                  points
+                </li>
+                <li>
+                  Need to source matching tiles for a roof installed 15 years
+                  ago to maintain uniform appearance
+                </li>
+                <li>
+                  Insurance claim requirements for detailed documentation and
+                  professional assessment
+                </li>
+                <li>
+                  Urgent timeline to prevent water damage during the upcoming
+                  rainy season
+                </li>
+              </ul>
+              <p>
+                The biggest challenge was finding exact tile matches for the
+                existing roof while ensuring the repair would be virtually
+                invisible once completed.
+              </p>
+            </div>
+
+            <!-- Solution -->
+            <div class="detail-section">
+              <h3><i class="fas fa-lightbulb me-2"></i> Our Solution</h3>
+              <p>
+                We developed a comprehensive tile replacement strategy that
+                addressed both immediate repair needs and long-term roof
+                integrity:
+              </p>
+              <ol>
+                <li>
+                  <strong>Detailed Assessment:</strong> Complete documentation
+                  of all damage with photographs and measurements for insurance
+                  purposes, ensuring maximum claim coverage.
+                </li>
+                <li>
+                  <strong>Tile Matching:</strong> Identification of the original
+                  tile manufacturer and product line, sourcing exact matches
+                  from specialty suppliers to ensure perfect color and texture
+                  integration.
+                </li>
+                <li>
+                  <strong>Strategic Replacement:</strong> Careful removal of
+                  damaged tiles while preserving surrounding intact tiles,
+                  minimizing disruption to the overall roof structure.
+                </li>
+                <li>
+                  <strong>Quality Installation:</strong> Professional
+                  installation using proper techniques and fasteners to ensure
+                  new tiles would withstand future weather events.
+                </li>
+                <li>
+                  <strong>Preventive Measures:</strong> Additional securing of
+                  vulnerable areas and inspection of underlayment to prevent
+                  future issues.
+                </li>
+              </ol>
+              <p>
+                Our approach ensured that the repaired roof would not only look
+                seamless but also provide enhanced protection against future
+                severe weather conditions.
+              </p>
+            </div>
+
+            <!-- Execution -->
+            <div class="detail-section">
+              <h3><i class="fas fa-cogs me-2"></i> The Execution</h3>
+              <p>
+                The tile replacement project was completed efficiently in three
+                phases:
+              </p>
+
+              <h4>Day 1: Assessment and Preparation</h4>
+              <p>
+                We began with a thorough roof inspection, documenting every
+                damaged tile with high-resolution photographs for insurance
+                purposes. Our team carefully marked each tile requiring
+                replacement and set up safety equipment and protective measures
+                for the surrounding property.
+              </p>
+
+              <h4>Day 2: Tile Removal and Installation</h4>
+              <p>
+                The damaged tiles were carefully removed to avoid disturbing
+                adjacent tiles. We inspected the underlayment and battens
+                beneath each removed tile, making minor repairs where necessary.
+                The new matching tiles were then installed using proper
+                fastening techniques and sealants.
+              </p>
+
+              <h4>Day 3: Finishing and Quality Control</h4>
+              <p>
+                Final positioning adjustments were made to ensure perfect
+                alignment and appearance. We conducted a comprehensive
+                inspection of the entire roof area, testing tile security and
+                checking for any remaining issues. The work area was thoroughly
+                cleaned and all debris removed.
+              </p>
+
+              <p>
+                Throughout the process, we maintained constant communication
+                with both the homeowners and their insurance company, providing
+                updates and additional documentation as required.
+              </p>
+            </div>
+
+            <!-- Results -->
+            <div class="detail-section">
+              <h3><i class="fas fa-trophy me-2"></i> The Results</h3>
+              <p>
+                The tile replacement project delivered outstanding results that
+                exceeded the homeowners' expectations:
+              </p>
+              <ul>
+                <li>
+                  Perfect tile matching resulted in a completely seamless
+                  appearance with no visible signs of repair work
+                </li>
+                <li>
+                  Full restoration of roof integrity and weather protection
+                </li>
+                <li>
+                  Successful insurance claim processing with our detailed
+                  documentation
+                </li>
+                <li>
+                  Enhanced tile security to better withstand future severe
+                  weather
+                </li>
+                <li>
+                  Peace of mind for the homeowners knowing their roof was
+                  professionally restored
+                </li>
+              </ul>
+              <p>
+                The project was completed within the three-day timeline and
+                budget, with the homeowners expressing complete satisfaction
+                with both the quality of work and our professional service
+                throughout the process.
+              </p>
+
+              <blockquote class="client-quote">
+                <p>
+                  "After the hailstorm, we were worried about finding matching
+                  tiles and the cost of repairs. Pav's Roofing not only found
+                  perfect matches but also helped us through the entire
+                  insurance process. You can't even tell where the repairs were
+                  made - it looks perfect!"
+                </p>
+                <footer>- Mark and Sarah T., Homeowners</footer>
+              </blockquote>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <!-- Materials Used -->
+            <div class="sidebar-widget">
+              <h3>Materials Used</h3>
+              <ul class="materials-list">
+                <li>
+                  <i class="fas fa-check-circle me-2"></i> Matching concrete
+                  roof tiles
+                </li>
+                <li>
+                  <i class="fas fa-check-circle me-2"></i> Tile clips and
+                  fasteners
+                </li>
+                <li>
+                  <i class="fas fa-check-circle me-2"></i> Flexible pointing
+                  compound
+                </li>
+                <li>
+                  <i class="fas fa-check-circle me-2"></i> Weather-resistant
+                  sealants
+                </li>
+                <li>
+                  <i class="fas fa-check-circle me-2"></i> Replacement battens
+                  (where needed)
+                </li>
+                <li>
+                  <i class="fas fa-check-circle me-2"></i> Protective
+                  underlayment patches
+                </li>
+              </ul>
+            </div>
+
+            <!-- Benefits -->
+            <div class="sidebar-widget">
+              <h3>Project Benefits</h3>
+              <div class="benefit-item">
+                <div class="benefit-icon">
+                  <i class="fas fa-eye"></i>
+                </div>
+                <div class="benefit-text">
+                  <h4>Seamless Appearance</h4>
+                  <p>Perfect tile matching ensures invisible repair work</p>
+                </div>
+              </div>
+              <div class="benefit-item">
+                <div class="benefit-icon">
+                  <i class="fas fa-shield-alt"></i>
+                </div>
+                <div class="benefit-text">
+                  <h4>Weather Protection</h4>
+                  <p>Restored roof integrity and enhanced storm resistance</p>
+                </div>
+              </div>
+              <div class="benefit-item">
+                <div class="benefit-icon">
+                  <i class="fas fa-dollar-sign"></i>
+                </div>
+                <div class="benefit-text">
+                  <h4>Insurance Support</h4>
+                  <p>Professional documentation for successful claims</p>
+                </div>
+              </div>
+              <div class="benefit-item">
+                <div class="benefit-icon">
+                  <i class="fas fa-clock"></i>
+                </div>
+                <div class="benefit-text">
+                  <h4>Quick Turnaround</h4>
+                  <p>Efficient 3-day completion prevents further damage</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Similar Projects -->
+            <div class="sidebar-widget">
+              <h3>Similar Projects</h3>
+              <div class="similar-projects">
+                <a
+                  href="./html-files/project-details-repair1.html"
+                  class="similar-project"
+                >
+                  <img
+                    src="../../assets/broken-roof-tiles.jpg"
+                    alt="Leak Resolution"
+                    class="img-fluid"
+                  />
+                  <h4>Leak Resolution</h4>
+                  <p>Cronulla, NSW</p>
+                </a>
+                <a
+                  href="./html-files/project-details-repair3.html"
+                  class="similar-project"
+                >
+                  <img
+                    src="../../assets/broken-roof-tiles.jpg"
+                    alt="Ridge Cap Restoration"
+                    class="img-fluid"
+                  />
+                  <h4>Ridge Cap Restoration</h4>
+                  <p>Gosford, NSW</p>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta">
+      <div class="container text-center">
+        <h2>Need Professional Tile Replacement?</h2>
+        <p>
+          Contact us today for expert tile matching and professional repair
+          services that restore your roof's protection and appearance.
+        </p>
+        <a
+          href="/roofing-protoV3/html-files/quote.html"
+          class="btn btn-light btn-lg"
+          >Get A Free Quote</a
+        >
+      </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+      <div id="footer-placeholder"></div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <div class="scroll-to-top" id="scrollToTop">
+      <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="../../js-files/index.js"></script>
+    <script src="../../js-files/nav.js"></script>
+    <script src="../../js-files/footer.js"></script>
+    <script src="../js-files/project-details.js"></script>
+  </body>
+</html>

@@ -68,9 +68,12 @@ function initProjectsPage() {
   
   accordionCollapse.forEach(collapse => {
     collapse.addEventListener('shown.bs.collapse', function() {
-      const accordionId = this.getAttribute('id');
-      // Update URL without page reload
-      history.replaceState(null, null, `#${accordionId}`);
+      // Always set the path to /roofing-protoV3/html-files/projects.html (no hash)
+      history.replaceState(null, null, '/roofing-protoV3/html-files/projects.html');
+    });
+    collapse.addEventListener('hidden.bs.collapse', function() {
+      // Always set the path to /roofing-protoV3/html-files/projects.html (no hash)
+      history.replaceState(null, null, '/roofing-protoV3/html-files/projects.html');
     });
   });
   
@@ -138,7 +141,3 @@ function initializeFilters() {
     });
   }
 }
-
-document.addEventListener('shown.bs.collapse', function () {
-  history.replaceState(null, '', window.location.pathname);
-});
