@@ -1,6 +1,3 @@
-/* Roof Replacement Page Styles */
-
-/* Hero section for the page */
 .page-hero {
   height: 500px;
   background-image: url('/roofing-protoV3/assets/roof-replacement-hero.jpg');
@@ -36,7 +33,6 @@
   margin-bottom: 30px;
 }
 
-/* Introduction section */
 .intro-section {
   padding: 80px 0;
   background-color: var(--white);
@@ -46,7 +42,6 @@
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
-/* When to Replace Section */
 .when-to-replace {
   padding: 80px 0;
   background-color: var(--light-bg);
@@ -94,7 +89,6 @@
   background-color: var(--primary-color);
 }
 
-/* Process Timeline */
 .process-section {
   padding: 80px 0;
   background-color: var(--white);
@@ -154,7 +148,6 @@
   margin-bottom: 15px;
 }
 
-/* Materials Section */
 .materials-section {
   padding: 80px 0;
   background-color: var(--light-bg);
@@ -197,7 +190,6 @@
   color: var(--secondary-color);
 }
 
-/* FAQ Section */
 .faq-section {
   padding: 80px 0;
   background-color: var(--white);
@@ -239,13 +231,11 @@
   color: var(--secondary-color);
 }
 
-/* Recent Projects Section */
 .recent-projects {
   padding: 80px 0;
   background-color: var(--light-bg);
 }
 
-/* Testimonials Section - Enhanced */
 .testimonials {
   padding: 80px 0;
   background-color: var(--white);
@@ -263,7 +253,6 @@
   transform: translateY(-10px);
 }
 
-/* CTA Section */
 .cta {
   padding: 80px 0;
   background-color: var(--primary-color);
@@ -297,24 +286,19 @@
   color: var(--white);
 }
 
-/* Responsive Adjustments */
 @media (max-width: 992px) {
   .page-hero {
     height: 400px;
   }
-  
   .page-hero h1 {
     font-size: 2.5rem;
   }
-  
   .process-timeline:before {
     left: 30px;
   }
-  
   .process-step {
     padding-left: 80px;
   }
-  
   .process-number {
     left: 10px;
   }
@@ -324,11 +308,9 @@
   .page-hero {
     height: 350px;
   }
-  
   .page-hero h1 {
     font-size: 2rem;
   }
-  
   .intro-section, 
   .when-to-replace, 
   .process-section, 
@@ -339,16 +321,13 @@
   .cta {
     padding: 60px 0;
   }
-  
   .process-timeline:before {
     display: none;
   }
-  
   .process-step {
     padding-left: 0;
     padding-top: 60px;
   }
-  
   .process-number {
     left: 50%;
     transform: translateX(-50%);

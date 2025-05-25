@@ -2,9 +2,14 @@
 
 /* Project Detail Header */
 .project-detail-header {
-  background-color: #f8f9fa;
-  padding: 40px 0;
-  border-bottom: 1px solid #e9ecef;
+  height: 400px;
+  background-image: linear-gradient(rgba(166, 124, 82, 0.8), rgba(26, 32, 44, 0.8));
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  color: white;
+  display: flex;
+  align-items: center;
 }
 
 .project-detail-header h1 {

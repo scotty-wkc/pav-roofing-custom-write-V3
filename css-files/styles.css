@@ -3,7 +3,6 @@
   padding: 0;
   box-sizing: border-box;
 }
-
 :root {
   --primary-color: #A67C52;
   --secondary-color: #1a202c;
@@ -11,60 +10,47 @@
   --white: #ffffff;
   --light-bg: #F4F1EB;
 }
-
 body {
   font-family: 'Arial', sans-serif;
 }
-
-/* Header styles */
 .top-bar {
   background-color: var(--secondary-color);
   color: var(--text-color);
   padding: 10px 0;
   font-size: 14px;
 }
-
 .top-bar a {
   color: var(--text-color);
   text-decoration: none;
 }
-
 .logo {
   max-height: 80px;
 }
-
 .main-nav .nav-link {
   color: var(--text-color);
   font-weight: 600;
   padding: 15px 20px;
   transition: color 0.3s;
 }
-
 .main-nav .nav-link:hover {
   color: var(--primary-color);
 }
-
 .main-nav .nav-link.active {
   color: var(--primary-color);
 }
-
 .dropdown-menu {
   border-radius: 0;
   border: none;
   box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
-
 #navCompanyTitle {
   font-size: 1.25rem;
   font-weight: bold;
   color: var(--primary-color);
 }
-
 #navCompanyTitle span {
   color: var(--text-color);
 }
-
-/* Hero section */
 .hero {
   height: 600px;
   background-image: url('/api/placeholder/1920/600');
@@ -73,7 +59,6 @@ body {
   position: relative;
   color: white;
 }
-
 .hero-overlay {
   position: absolute;
   top: 0;
@@ -84,22 +69,18 @@ body {
   display: flex;
   align-items: center;
 }
-
 .hero-content {
   max-width: 700px;
 }
-
 .hero h1 {
   font-size: 3rem;
   font-weight: 700;
   margin-bottom: 20px;
 }
-
 .hero p {
   font-size: 1.25rem;
   margin-bottom: 30px;
 }
-
 .btn-primary {
   background-color: var(--primary-color);
   border-color: var(--primary-color);
@@ -109,13 +90,11 @@ body {
   transition: all 0.3s;
   color: var(--white);
 }
-
 .btn-primary:hover {
   background-color: #8a6843;
   border-color: #8a6843;
   color: var(--white);
 }
-
 .btn-outline-light {
   color: var(--white);
   border: 2px solid var(--white);
@@ -126,23 +105,18 @@ body {
   transition: all 0.3s;
   background-color: transparent;
 }
-
 .btn-outline-light:hover {
   background-color: var(--white);
   color: var(--secondary-color);
   border-color: var(--white);
 }
-
-/* Services section */
 .services {
   padding: 80px 0;
 }
-
 .section-title {
   margin-bottom: 50px;
   position: relative;
 }
-
 .section-title:after {
   content: "";
   position: absolute;
@@ -152,109 +126,85 @@ body {
   height: 4px;
   background-color: var(--primary-color);
 }
-
 .service-card {
   margin-bottom: 30px;
   transition: transform 0.3s;
   height: 100%;
   box-shadow: 0 5px 15px rgba(0,0,0,0.05);
 }
-
 .service-card:hover {
   transform: translateY(-10px);
 }
-
 .service-img {
   height: 200px;
   object-fit: cover;
 }
-
-/* About section */
 .about {
   padding: 80px 0;
   background-color: var(--light-bg);
 }
-
-/* Features section */
 .features {
   padding: 80px 0;
 }
-
 .feature-icon {
   color: var(--primary-color);
   font-size: 3rem;
   margin-bottom: 20px;
 }
-
-/* Testimonials */
 .testimonials {
   padding: 80px 0;
   background-color: var(--light-bg);
 }
-
 .testimonial-card {
   padding: 30px;
   margin: 15px;
   box-shadow: 0 5px 15px rgba(0,0,0,0.05);
   background-color: white;
 }
-
 .testimonial-stars {
   color: gold;
   margin-bottom: 15px;
 }
-
-/* CTA section */
 .cta {
   padding: 80px 0;
   background-color: var(--primary-color);
   color: var(--white);
 }
-
-/* Footer */
 footer {
   background-color: var(--light-bg);
   color: var(--secondary-color);
-  padding: 40px 0; /* Adjust padding as needed */
+  padding: 40px 0;
 }
-
 .footer-heading {
   color: var(--secondary-color);
   margin-bottom: 15px;
   font-size: 1.2rem;
   font-weight: 600;
 }
-
 footer .row {
   display: flex;
-  align-items: flex-start; /* Align items to the top */
+  align-items: flex-start;
 }
-
 footer ul {
   list-style: none;
   padding-left: 0;
 }
-
 footer ul li {
   margin-bottom: 10px;
 }
-
 footer a {
   color: var(--secondary-color);
   text-decoration: none;
   transition: color 0.3s;
 }
-
 footer a:hover {
   color: var(--primary-color);
 }
-
 .footer-bottom {
   padding: 20px 0;
   border-top: 1px solid rgba(26, 32, 44, 0.1);
   margin-top: 40px;
 }
-
 .social-icons a {
   display: inline-block;
   width: 40px;
@@ -266,27 +216,20 @@ footer a:hover {
   border-radius: 50%;
   transition: background-color 0.3s, color 0.3s;
 }
-
 .social-icons a:hover {
   background-color: var(--primary-color);
   color: var(--white);
 }
-
-/* Mobile navigation */
 .navbar-toggler {
   border: none;
   background-color: var(--primary-color);
 }
-
 .navbar-toggler:focus {
   box-shadow: none;
 }
-
 .navbar-toggler-icon {
   filter: brightness(0) invert(1);
 }
-
-/* Scroll-to-top button */
 .scroll-to-top {
   position: fixed;
   bottom: 20px;
@@ -305,35 +248,31 @@ footer a:hover {
   transition: opacity 0.3s;
   z-index: 1000;
 }
-
 .scroll-to-top.active {
   opacity: 1;
 }
-
-/* Projects gallery */
+.scroll-to-top:hover {
+  box-shadow: 0 4px 16px 0 rgba(0,0,0,0.25), 0 0 0 5px rgba(166,124,82,0.15);
+}
 .projects {
   padding: 80px 0;
   background-color: var(--light-bg);
 }
-
-/* Project gallery styles */
 .project-item {
   position: relative;
   overflow: hidden;
-  width: 100%; /* Ensures the card takes up the full column width */
-  height: 300px; /* Set a fixed height for all cards */
+  width: 100%;
+  height: 300px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
 .project-img {
-  width: 100%; /* Ensures the image fills the card horizontally */
-  height: 100%; /* Ensures the image fills the card vertically */
-  object-fit: cover; /* Ensures the image scales properly without distortion */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   transition: transform 0.5s;
 }
-
 .project-overlay {
   position: absolute;
   top: 0;
@@ -347,21 +286,16 @@ footer a:hover {
   opacity: 0;
   transition: opacity 0.5s;
 }
-
 .project-item:hover .project-overlay {
   opacity: 1;
 }
-
 .project-item:hover .project-img {
-  transform: scale(1.1); /* Slight zoom effect on hover */
+  transform: scale(1.1);
 }
-
-/* Responsive adjustments */
 @media (max-width: 992px) {
   .hero {
       height: 500px;
   }
-  
   .hero h1 {
       font-size: 2.5rem;
   }
@@ -369,20 +303,16 @@ footer a:hover {
       display: hidden;
   }
 }
-
 @media (max-width: 768px) {
   .hero {
       height: 400px;
   }
-  
   .hero h1 {
       font-size: 2rem;
   }
-
   .top.social-icons {
       display: hidden;
   }
-  
   .services, .about, .features, .testimonials, .projects, .cta {
       padding: 60px 0;
   }

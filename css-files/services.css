@@ -1,9 +1,12 @@
-/* Services Page Specific Styles */
 .page-header {
-  background-color: var(--secondary-color);
-  color: var(--white);
-  padding: 50px 0;
+  height: 400px;
+  background-image: linear-gradient(rgba(166, 124, 82, 0.8), rgba(26, 32, 44, 0.8));
+  background-size: cover;
+  background-position: center;
   position: relative;
+  color: white;
+  display: flex;
+  align-items: center;
 }
 
 .page-header h1 {
@@ -12,27 +15,6 @@
   margin-bottom: 10px;
 }
 
-/* .breadcrumb {
-  display: inline-flex;
-  background: transparent;
-  margin-bottom: 0;
-  padding: 0;
-}
-
-.breadcrumb-item a {
-  color: var(--bs-primary);
-  text-decoration: none;
-}
-
-.breadcrumb-item.active {
-  color: #fff;
-}
-
-.breadcrumb-item + .breadcrumb-item::before {
-  color: #fff;
-} */
-
-/* Service Cards */
 .service-card {
   border: none;
   border-radius: 8px;
@@ -88,7 +70,6 @@
   color: var(--bs-primary);
 }
 
-/* Process Section */
 .process-step {
   padding: 20px 15px;
 }
@@ -129,7 +110,6 @@
   color: var(--bs-dark);
 }
 
-/* FAQ Section */
 .accordion-item {
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 8px !important;
@@ -160,7 +140,6 @@
   line-height: 1.6;
 }
 
-/* Service Detail Pages */
 .service-detail-header {
   position: relative;
   background-size: cover;
@@ -237,9 +216,6 @@
   font-weight: 600;
 }
 
-/* Service Detail Page Enhanced Styles */
-
-/* Service Content Area */
 .service-detail-content {
   padding: 60px 0;
 }
@@ -275,7 +251,6 @@
   margin-bottom: 20px;
 }
 
-/* Service List Styling */
 .service-list {
   padding-left: 20px;
   margin-bottom: 30px;
@@ -299,7 +274,6 @@
   border-radius: 50%;
 }
 
-/* Process List */
 .process-list {
   counter-reset: process-counter;
   list-style: none;
@@ -336,7 +310,6 @@
   font-weight: bold;
 }
 
-/* Image Styling */
 .service-detail-content img {
   border-radius: 8px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
@@ -348,7 +321,6 @@
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
 
-/* Benefits Section */
 .service-benefits {
   background-color: rgba(var(--bs-primary-rgb), 0.05);
   border-radius: 12px;
@@ -408,7 +380,6 @@
   color: #666;
 }
 
-/* Material Cards */
 .card {
   border: none;
   border-radius: 10px;
@@ -438,7 +409,6 @@
   color: #555;
 }
 
-/* Sidebar Styling */
 .service-sidebar {
   position: sticky;
   top: 100px;
@@ -516,7 +486,6 @@
   opacity: 1;
 }
 
-/* Testimonial Widget */
 .testimonial-widget {
   background-color: #fff;
   border-radius: 10px;
@@ -541,7 +510,6 @@
   margin-bottom: 15px;
 }
 
-/* Contact Widget */
 .contact-widget {
   background-color: #f8f9fa;
 }
@@ -575,7 +543,6 @@
   color: var(--bs-primary);
 }
 
-/* Project Section */
 .project-item {
   position: relative;
   border-radius: 10px;
@@ -613,7 +580,6 @@
   margin-bottom: 5px;
 }
 
-/* Call To Action */
 .cta {
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../assets/cta-bg.jpg') center/cover no-repeat;
   padding: 80px 0;
@@ -650,7 +616,6 @@
   margin-right: auto;
 }
 
-/* Responsive Adjustments */
 @media (max-width: 991px) {
   .service-sidebar {
     position: static;
@@ -696,7 +661,6 @@
   }
 }
 
-/* Responsive */
 @media (max-width: 991px) {
   .service-img-wrapper {
     height: 200px;

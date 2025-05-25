@@ -1,40 +1,18 @@
-/* About Us Page Styles */
+.page-header {
 
 /* Page Header */
 .page-header {
-  /* background-color: var(--secondary-color);
-  color: var(--white);
-  padding: 50px 0;
-  position: relative; */
-    background-color: #f8f9fa;
+  background-color: #f8f9fa;
   padding: 40px 0;
   border-bottom: 1px solid #e9ecef;
 }
 
 .page-header h1 {
-  /* font-size: 2.5rem;
-  font-weight: 700;
-  margin-bottom: 10px; */
-    font-size: 2.5rem;
+  font-size: 2.5rem;
   font-weight: 700;
   margin-bottom: 10px;
   color: #343a40;
 }
-
-/* .breadcrumb {
-  background-color: transparent;
-  padding: 0;
-  margin: 0;
-}
-
-.breadcrumb-item a {
-  color: var(--primary-color);
-  text-decoration: none;
-}
-
-.breadcrumb-item.active {
-  color: var(--text-color);
-} */
 
 /* Our Story Section */
 .our-story {
@@ -227,11 +205,9 @@
   .page-header {
     padding: 40px 0;
   }
-  
   .page-header h1 {
     font-size: 2rem;
   }
-  
   .our-story, .our-values, .team-section, .certifications, .faq-section {
     padding: 60px 0;
   }
@@ -241,11 +217,9 @@
   .certification-item {
     flex-direction: column;
   }
-  
   .cert-icon {
     margin-bottom: 15px;
   }
-  
   .value-card, .team-member {
     margin-bottom: 30px;
   }

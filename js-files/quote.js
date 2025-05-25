@@ -1,349 +1,398 @@
-// Contact Form JavaScript
-document.addEventListener('DOMContentLoaded', function() {
-    const form = document.getElementById('contactForm');
-    const submitBtn = document.getElementById('submitBtn');
-    const btnText = submitBtn.querySelector('.btn-text');
-    const btnSpinner = submitBtn.querySelector('.btn-spinner');
-    const successMessage = document.getElementById('successMessage');
-    const errorMessage = document.getElementById('errorMessage');
+  // Quote Management System
+      class QuoteManager {
+        constructor() {
+          this.storageKey = "pavs_roofing_quotes";
+          this.init();
+        }
 
-    // Form submission handler
-    form.addEventListener('submit', function(e) {
-        e.preventDefault();
-        
-        // Hide any existing messages
-        hideMessages();
-        
-        // Validate form
-        if (!form.checkValidity()) {
-            e.stopPropagation();
-            form.classList.add('was-validated');
+        init() {
+          this.updateSubmissionCount();
+        }
+
+        generateQuoteNumber() {
+          const now = new Date();
+          const year = now.getFullYear();
+          const month = String(now.getMonth() + 1).padStart(2, "0");
+          const day = String(now.getDate()).padStart(2, "0");
+          const time =
+            String(now.getHours()).padStart(2, "0") +
+            String(now.getMinutes()).padStart(2, "0");
+          const random = Math.floor(Math.random() * 100)
+            .toString()
+            .padStart(2, "0");
+
+          return `PRS-${year}${month}${day}-${time}${random}`;
+        }
+
+        saveQuote(quoteData) {
+          try {
+            const quotes = this.getQuotes();
+            const quoteNumber = this.generateQuoteNumber();
+
+            const quote = {
+              quoteNumber: quoteNumber,
+              ...quoteData,
+              submittedAt: new Date().toISOString(),
+              status: "new",
+            };
+
+            quotes.push(quote);
+
+            // Store in memory (in a real app, this would go to a database)
+            localStorage.setItem(this.storageKey, JSON.stringify(quotes));
+
+            console.log("Quote saved:", quote);
+            this.updateSubmissionCount();
+
+            return quote;
+          } catch (error) {
+            console.error("Error saving quote:", error);
+            throw error;
+          }
+        }
+
+        getQuotes() {
+          try {
+            const quotes = localStorage.getItem(this.storageKey);
+            return quotes ? JSON.parse(quotes) : [];
+          } catch (error) {
+            console.error("Error retrieving quotes:", error);
+            return [];
+          }
+        }
+
+        clearQuotes() {
+          localStorage.removeItem(this.storageKey);
+          this.updateSubmissionCount();
+          this.displaySubmissions();
+        }
+
+        updateSubmissionCount() {
+          const count = this.getQuotes().length;
+          document.getElementById("submissionCount").textContent = count;
+        }
+
+        displaySubmissions() {
+          const quotes = this.getQuotes();
+          const container = document.getElementById("submissionsList");
+
+          if (quotes.length === 0) {
+            container.innerHTML =
+              '<p class="text-muted">No submissions yet.</p>';
             return;
+          }
+
+          const html = quotes
+            .reverse()
+            .map(
+              (quote) => `
+                    <div class="submission-item">
+                        <div class="fw-bold text-primary">${
+                          quote.quoteNumber
+                        }</div>
+                        <div><strong>${quote.firstName} ${
+                quote.lastName
+              }</strong></div>
+                        <div><i class="fas fa-envelope me-1"></i> ${
+                          quote.email
+                        }</div>
+                        <div><i class="fas fa-phone me-1"></i> ${
+                          quote.phone
+                        }</div>
+                        <div><i class="fas fa-map-marker-alt me-1"></i> ${
+                          quote.address
+                        }, ${quote.suburb} ${quote.postcode}</div>
+                        <div><i class="fas fa-wrench me-1"></i> ${this.getServiceName(
+                          quote.serviceType
+                        )}</div>
+                        ${
+                          quote.roofType
+                            ? `<div><i class="fas fa-home me-1"></i> ${this.getRoofTypeName(
+                                quote.roofType
+                              )}</div>`
+                            : ""
+                        }
+                        ${
+                          quote.timeframe
+                            ? `<div><i class="fas fa-clock me-1"></i> ${this.getTimeframeName(
+                                quote.timeframe
+                              )}</div>`
+                            : ""
+                        }
+                        ${
+                          quote.message
+                            ? `<div class="mt-1"><small class="text-muted">"${quote.message.substring(
+                                0,
+                                100
+                              )}${
+                                quote.message.length > 100 ? "..." : ""
+                              }"</small></div>`
+                            : ""
+                        }
+                        <div class="text-muted small mt-1">
+                            <i class="fas fa-calendar me-1"></i> ${new Date(
+                              quote.submittedAt
+                            ).toLocaleString()}
+                        </div>
+                    </div>
+                `
+            )
+            .join("");
+
+          container.innerHTML = html;
         }
 
-        // Show loading state
-        showLoadingState();
-        
-        // Track form submission
-        trackFormInteraction('form_submit');
-        
-        // Simulate form submission (replace with actual submission logic)
-        setTimeout(() => {
-            // Simulate random success/failure for demo
-            const isSuccess = Math.random() > 0.1; // 90% success rate
-            
-            if (isSuccess) {
-                showSuccessMessage();
-                resetForm();
-                trackFormInteraction('form_success');
-            } else {
-                showErrorMessage();
-                trackFormInteraction('form_error');
+        getServiceName(value) {
+          const services = {
+            "roof-replacement": "Complete Roof Replacement",
+            "roof-repairs": "Roof Repairs",
+            "roof-maintenance": "Roof Maintenance",
+            "roof-inspection": "Roof Inspection",
+            "gutter-installation": "Gutter Installation",
+            "emergency-repairs": "Emergency Repairs",
+            other: "Other",
+          };
+          return services[value] || value;
+        }
+
+        getRoofTypeName(value) {
+          const types = {
+            tile: "Tile Roof",
+            metal: "Metal Roof",
+            asbestos: "Asbestos Roof",
+            slate: "Slate Roof",
+            concrete: "Concrete Roof",
+            other: "Other/Not Sure",
+          };
+          return types[value] || value;
+        }
+
+        getTimeframeName(value) {
+          const timeframes = {
+            asap: "As soon as possible",
+            "1-2weeks": "Within 1-2 weeks",
+            "1month": "Within 1 month",
+            "3months": "Within 3 months",
+            flexible: "I'm flexible",
+          };
+          return timeframes[value] || value;
+        }
+      }
+
+      // Initialize Quote Manager
+      const quoteManager = new QuoteManager();
+
+      // Form handling
+      document.addEventListener("DOMContentLoaded", () => {
+        const form = document.getElementById("contactForm");
+        const submitBtn = document.getElementById("submitBtn");
+        const btnText = submitBtn.querySelector(".btn-text");
+        const btnSpinner = submitBtn.querySelector(".btn-spinner");
+        const successMessage = document.getElementById("successMessage");
+        const errorMessage = document.getElementById("errorMessage");
+        const quoteNumberElement = document.getElementById("quoteNumber");
+
+        // Form submission handler
+        form.addEventListener("submit", async (e) => {
+          e.preventDefault();
+
+          // Hide any existing messages
+          hideMessages();
+
+          // Validate form
+          if (!form.checkValidity()) {
+            e.stopPropagation();
+            form.classList.add("was-validated");
+            return;
+          }
+
+          // Show loading state
+          showLoadingState();
+
+          try {
+            // Collect form data
+            const formData = new FormData(form);
+            const quoteData = {};
+
+            for (let [key, value] of formData.entries()) {
+              if (key !== "privacy") {
+                quoteData[key] = value;
+              }
             }
-            
+
+            // Simulate processing time
+            await new Promise((resolve) => setTimeout(resolve, 2000));
+
+            // Save quote and get quote number
+            const savedQuote = quoteManager.saveQuote(quoteData);
+
+            // Show success message with quote number
+            quoteNumberElement.textContent = savedQuote.quoteNumber;
+            showSuccessMessage();
+            resetForm();
+          } catch (error) {
+            console.error("Error saving quote:", error);
+            showErrorMessage();
+          } finally {
             hideLoadingState();
-        }, 2000);
-    });
+          }
+        });
 
-    // Real-time validation
-    const inputs = form.querySelectorAll('input, select, textarea');
-    inputs.forEach(input => {
-        input.addEventListener('blur', function() {
+        // Real-time validation
+        const inputs = form.querySelectorAll("input, select, textarea");
+        inputs.forEach((input) => {
+          input.addEventListener("blur", function () {
             validateField(this);
-        });
-        
-        input.addEventListener('input', function() {
-            // Track form start on first interaction
-            if (!formStarted) {
-                formStarted = true;
-                trackFormInteraction('form_start');
-            }
-            
+          });
+
+          input.addEventListener("input", function () {
             // Clear validation state when user starts typing
-            if (this.classList.contains('is-invalid')) {
-                this.classList.remove('is-invalid');
+            if (this.classList.contains("is-invalid")) {
+              this.classList.remove("is-invalid");
             }
+          });
         });
-        
-        // Track field interactions
-        input.addEventListener('focus', function() {
-            trackFormInteraction('field_focus', this.name);
-        });
-    });
 
-    // Phone number formatting
-    const phoneInput = document.getElementById('phone');
-    phoneInput.addEventListener('input', function(e) {
-        let value = e.target.value.replace(/\D/g, '');
-        
-        // Format as Australian phone number
-        if (value.length >= 10) {
-            if (value.startsWith('04')) {
-                // Mobile format: 0412 345 678
-                value = value.replace(/(\d{4})(\d{3})(\d{3})/, '$1 $2 $3');
-            } else if (value.startsWith('0')) {
-                // Landline format: (02) 1234 5678 or similar
-                if (value.length === 10) {
-                    value = value.replace(/(\d{2})(\d{4})(\d{4})/, '($1) $2 $3');
-                }
+        // Phone number formatting
+        const phoneInput = document.getElementById("phone");
+        phoneInput.addEventListener("input", (e) => {
+          let value = e.target.value.replace(/\D/g, "");
+
+          // Format as Australian phone number
+          if (value.length >= 10) {
+            if (value.startsWith("04")) {
+              // Mobile format: 0412 345 678
+              value = value.replace(/(\d{4})(\d{3})(\d{3})/, "$1 $2 $3");
+            } else if (value.startsWith("0")) {
+              // Landline format: (02) 1234 5678 or similar
+              if (value.length === 10) {
+                value = value.replace(/(\d{2})(\d{4})(\d{4})/, "($1) $2 $3");
+              }
             }
-        }
-        
-        e.target.value = value;
-    });
+          }
 
-    // Postcode validation
-    const postcodeInput = document.getElementById('postcode');
-    postcodeInput.addEventListener('input', function(e) {
-        let value = e.target.value.replace(/\D/g, '');
-        if (value.length > 4) {
+          e.target.value = value;
+        });
+
+        // Postcode validation
+        const postcodeInput = document.getElementById("postcode");
+        postcodeInput.addEventListener("input", (e) => {
+          let value = e.target.value.replace(/\D/g, "");
+          if (value.length > 4) {
             value = value.slice(0, 4);
+          }
+          e.target.value = value;
+        });
+
+        // Function to validate individual field
+        function validateField(field) {
+          const isValid = field.checkValidity();
+
+          if (isValid) {
+            field.classList.remove("is-invalid");
+            field.classList.add("is-valid");
+          } else {
+            field.classList.remove("is-valid");
+            field.classList.add("is-invalid");
+          }
+
+          return isValid;
         }
-        e.target.value = value;
-    });
 
-    // Service type change handler
-    const serviceTypeSelect = document.getElementById('serviceType');
-    serviceTypeSelect.addEventListener('change', function() {
-        trackFormInteraction('service_selected', this.value);
-    });
+        // Function to show loading state
+        function showLoadingState() {
+          submitBtn.disabled = true;
+          submitBtn.classList.add("submitting");
+          btnText.textContent = "Sending...";
+          btnSpinner.classList.remove("d-none");
+        }
 
-    // Function to validate individual field
-    function validateField(field) {
-        const isValid = field.checkValidity();
-        
-        if (isValid) {
-            field.classList.remove('is-invalid');
-            field.classList.add('is-valid');
+        // Function to hide loading state
+        function hideLoadingState() {
+          submitBtn.disabled = false;
+          submitBtn.classList.remove("submitting");
+          btnText.textContent = "Get My Free Quote";
+          btnSpinner.classList.add("d-none");
+        }
+
+        // Function to show success message
+        function showSuccessMessage() {
+          successMessage.classList.remove("d-none");
+          successMessage.scrollIntoView({
+            behavior: "smooth",
+            block: "center",
+          });
+        }
+
+        // Function to show error message
+        function showErrorMessage() {
+          errorMessage.classList.remove("d-none");
+          errorMessage.scrollIntoView({ behavior: "smooth", block: "center" });
+
+          // Hide after 8 seconds
+          setTimeout(() => {
+            errorMessage.classList.add("d-none");
+          }, 8000);
+        }
+
+        // Function to hide all messages
+        function hideMessages() {
+          successMessage.classList.add("d-none");
+          errorMessage.classList.add("d-none");
+        }
+
+        // Function to reset form
+        function resetForm() {
+          form.reset();
+          form.classList.remove("was-validated");
+
+          // Remove validation classes from all fields
+          inputs.forEach((input) => {
+            input.classList.remove("is-valid", "is-invalid");
+          });
+        }
+
+        // Enhanced form validation messages
+        const customValidationMessages = {
+          firstName: "Please enter your first name",
+          lastName: "Please enter your last name",
+          email: "Please enter a valid email address (e.g., john@example.com)",
+          phone: "Please enter a valid Australian phone number",
+          address: "Please enter the property address where work is needed",
+          suburb: "Please enter the suburb",
+          postcode: "Please enter a valid 4-digit Australian postcode",
+          serviceType: "Please select the type of service you need",
+          privacy: "You must agree to our privacy terms to continue",
+        };
+
+        // Apply custom validation messages
+        Object.keys(customValidationMessages).forEach((fieldName) => {
+          const field = document.getElementById(fieldName);
+          if (field) {
+            field.addEventListener("invalid", function () {
+              this.setCustomValidity(customValidationMessages[fieldName]);
+            });
+
+            field.addEventListener("input", function () {
+              this.setCustomValidity("");
+            });
+          }
+        });
+      });
+
+      // Admin panel functions
+      function toggleSubmissions() {
+        const list = document.getElementById("submissionsList");
+        if (list.style.display === "none") {
+          list.style.display = "block";
+          quoteManager.displaySubmissions();
         } else {
-            field.classList.remove('is-valid');
-            field.classList.add('is-invalid');
+          list.style.display = "none";
         }
-        
-        return isValid;
-    }
+      }
 
-    // Function to show loading state
-    function showLoadingState() {
-        submitBtn.disabled = true;
-        submitBtn.classList.add('submitting');
-        btnText.textContent = 'Sending...';
-        btnSpinner.classList.remove('d-none');
-    }
-
-    // Function to hide loading state
-    function hideLoadingState() {
-        submitBtn.disabled = false;
-        submitBtn.classList.remove('submitting');
-        btnText.textContent = 'Get My Free Quote';
-        btnSpinner.classList.add('d-none');
-    }
-
-    // Function to show success message
-    function showSuccessMessage() {
-        successMessage.classList.remove('d-none');
-        successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        
-        // Hide after 10 seconds
-        setTimeout(() => {
-            successMessage.classList.add('d-none');
-        }, 10000);
-    }
-
-    // Function to show error message
-    function showErrorMessage() {
-        errorMessage.classList.remove('d-none');
-        errorMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        
-        // Hide after 8 seconds
-        setTimeout(() => {
-            errorMessage.classList.add('d-none');
-        }, 8000);
-    }
-
-    // Function to hide all messages
-    function hideMessages() {
-        successMessage.classList.add('d-none');
-        errorMessage.classList.add('d-none');
-    }
-
-    // Function to reset form
-    function resetForm() {
-        form.reset();
-        form.classList.remove('was-validated');
-        
-        // Remove validation classes from all fields
-        inputs.forEach(input => {
-            input.classList.remove('is-valid', 'is-invalid');
-        });
-        
-        // Reset form started flag
-        formStarted = false;
-    }
-
-    // Scroll to top functionality
-    const scrollToTopBtn = document.getElementById('scrollToTop');
-    
-    if (scrollToTopBtn) {
-        window.addEventListener('scroll', function() {
-            if (window.pageYOffset > 300) {
-                scrollToTopBtn.classList.add('active');
-            } else {
-                scrollToTopBtn.classList.remove('active');
-            }
-        });
-        
-        scrollToTopBtn.addEventListener('click', function() {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        });
-    }
-
-    // Form analytics tracking
-    function trackFormInteraction(action, field = null) {
-        // Console log for debugging
-        console.log('Form interaction:', action, field);
-        
-        // Google Analytics 4 event tracking (uncomment and modify as needed)
-        // if (typeof gtag !== 'undefined') {
-        //     gtag('event', action, {
-        //         'event_category': 'Contact Form',
-        //         'event_label': field || 'general',
-        //         'custom_parameter_1': 'roofing_contact'
-        //     });
-        // }
-        
-        // Facebook Pixel tracking (uncomment and modify as needed)
-        // if (typeof fbq !== 'undefined') {
-        //     fbq('trackCustom', 'ContactForm_' + action, {
-        //         field: field || 'general'
-        //     });
-        // }
-        
-        // Custom analytics endpoint (replace with your own)
-        // fetch('/api/analytics', {
-        //     method: 'POST',
-        //     headers: {
-        //         'Content-Type': 'application/json',
-        //     },
-        //     body: JSON.stringify({
-        //         action: action,
-        //         field: field,
-        //         timestamp: new Date().toISOString(),
-        //         page: 'contact'
-        //     })
-        // }).catch(error => console.log('Analytics error:', error));
-    }
-
-    // Track form abandonment
-    let formStarted = false;
-    let formCompleted = false;
-    
-    // Track when user leaves the page with incomplete form
-    window.addEventListener('beforeunload', function() {
-        if (formStarted && !formCompleted) {
-            trackFormInteraction('form_abandoned');
+      function clearSubmissions() {
+        if (confirm("Are you sure you want to clear all submissions?")) {
+          quoteManager.clearQuotes();
         }
-    });
-
-    // Mark form as completed when successfully submitted
-    form.addEventListener('submit', function() {
-        if (form.checkValidity()) {
-            formCompleted = true;
-        }
-    });
-
-    // Enhanced form validation messages
-    const customValidationMessages = {
-        firstName: 'Please enter your first name',
-        lastName: 'Please enter your last name', 
-        email: 'Please enter a valid email address (e.g., john@example.com)',
-        phone: 'Please enter a valid Australian phone number',
-        address: 'Please enter the property address where work is needed',
-        suburb: 'Please enter the suburb',
-        postcode: 'Please enter a valid 4-digit Australian postcode',
-        serviceType: 'Please select the type of service you need',
-        privacy: 'You must agree to our privacy terms to continue'
-    };
-
-    // Apply custom validation messages
-    Object.keys(customValidationMessages).forEach(fieldName => {
-        const field = document.getElementById(fieldName);
-        if (field) {
-            field.addEventListener('invalid', function() {
-                this.setCustomValidity(customValidationMessages[fieldName]);
-            });
-            
-            field.addEventListener('input', function() {
-                this.setCustomValidity('');
-            });
-        }
-    });
-
-    // Auto-save form data to prevent loss (optional feature)
-    let autoSaveTimeout;
-    const autoSaveKey = 'pavs_roofing_contact_form';
-    
-    function autoSaveForm() {
-        const formData = new FormData(form);
-        const data = {};
-        
-        for (let [key, value] of formData.entries()) {
-            if (key !== 'privacy') { // Don't save privacy checkbox state
-                data[key] = value;
-            }
-        }
-        
-        try {
-            sessionStorage.setItem(autoSaveKey, JSON.stringify(data));
-        } catch (error) {
-            console.log('Auto-save failed:', error);
-        }
-    }
-    
-    function loadSavedForm() {
-        try {
-            const savedData = sessionStorage.getItem(autoSaveKey);
-            if (savedData) {
-                const data = JSON.parse(savedData);
-                
-                Object.keys(data).forEach(key => {
-                    const field = document.getElementById(key);
-                    if (field && data[key]) {
-                        field.value = data[key];
-                    }
-                });
-            }
-        } catch (error) {
-            console.log('Load saved form failed:', error);
-        }
-    }
-    
-    function clearSavedForm() {
-        try {
-            sessionStorage.removeItem(autoSaveKey);
-        } catch (error) {
-            console.log('Clear saved form failed:', error);
-        }
-    }
-    
-    // Load saved form data on page load
-    loadSavedForm();
-    
-    // Auto-save form data as user types
-    inputs.forEach(input => {
-        input.addEventListener('input', function() {
-            clearTimeout(autoSaveTimeout);
-            autoSaveTimeout = setTimeout(autoSaveForm, 1000); // Save after 1 second of no typing
-        });
-    });
-    
-    // Clear saved data on successful submission
-    form.addEventListener('submit', function() {
-        if (form.checkValidity()) {
-            setTimeout(clearSavedForm, 2000); // Clear after success message shows
-        }
-    });
-});
+      }

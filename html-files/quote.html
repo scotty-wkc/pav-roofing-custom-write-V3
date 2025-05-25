@@ -79,18 +79,36 @@
       <div id="navbar-placeholder"></div>
     </header>
 
+    <!-- Admin Panel for Demo -->
+    <div class="admin-panel">
+      <button class="admin-toggle" onclick="toggleSubmissions()">
+        <i class="fas fa-list"></i> View Submissions (<span id="submissionCount"
+          >0</span
+        >)
+      </button>
+      <div
+        id="submissionsList"
+        class="submissions-list"
+        style="display: none"
+      ></div>
+      <button
+        class="btn btn-sm btn-outline-danger mt-2"
+        onclick="clearSubmissions()"
+      >
+        Clear All
+      </button>
+    </div>
+
     <!-- Hero Section -->
     <section class="contact-hero">
-      <div class="hero-overlay">
-        <div class="container">
-          <div class="hero-content text-center">
-            <h1>Get Your Free Roofing Quote</h1>
-            <p>
-              Ready to protect your home with quality roofing? Contact us today
-              for a free, no-obligation quote and experience the personalized
-              service that sets us apart.
-            </p>
-          </div>
+      <div class="container">
+        <div class="hero-content text-center">
+          <h1>Get Your Free Roofing Quote</h1>
+          <p>
+            Ready to protect your home with quality roofing? Contact us today
+            for a free, no-obligation quote and experience the personalized
+            service that sets us apart.
+          </p>
         </div>
       </div>
     </section>
@@ -337,6 +355,10 @@
                       We've received your request and will contact you within 24
                       hours with your free quote.
                     </p>
+                    <div id="quoteNumberDisplay" class="quote-number">
+                      <i class="fas fa-file-alt me-2"></i>Your Quote Reference:
+                      <span id="quoteNumber"></span>
+                    </div>
                   </div>
                 </div>
               </div>
