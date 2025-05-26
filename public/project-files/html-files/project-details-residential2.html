@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Heritage Cottage Project | Pav's Roofing Solutions</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css-files/styles.css" />
+    <link rel="stylesheet" href="/css-files/nav.css" />
+    <link
+      rel="stylesheet"
+      href="/project-files/css-files/project-details.css"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="/assets/transparent-logo-removebg-lite.png"
+    />
+    <link
+      rel="shortcut icon"
+      href="/assets/transparent-logo-removebg-lite.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/assets/transparent-logo-removebg-lite.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/assets/transparent-logo-removebg-lite.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/assets/transparent-logo-removebg-lite.png"
+    />
+    <base href="roofing-protoV3" />
+  </head>
+  <body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8">
+            <i class="fas fa-phone-alt me-2"></i>
+            <a href="tel:0412345678">0412 345 678</a>
+            <span class="mx-3">|</span>
+            <i class="fas fa-envelope me-2"></i>
+            <a href="mailto:info@pavsroofing.com.au">info@pavsroofing.com.au</a>
+          </div>
+          <div class="col-md-4 text-md-end">
+            <div class="social-icons">
+              <a href="www.facebook.com/pavsroofing"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a href="www.instagram.com/pavsroofing"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="www.linkedin.com/company/pavsroofing"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Header/Navigation -->
+    <header class="sticky-top">
+      <div id="navbar-placeholder"></div>
+    </header>
+
+    <!-- Project Detail Header -->
+    <section class="project-detail-header">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <h1>Heritage Cottage</h1>
+            <div class="project-meta">
+              <span><i class="fas fa-map-marker-alt"></i> Newcastle, NSW</span>
+              <span
+                ><i class="fas fa-calendar-alt"></i> Completed: June 2023</span
+              >
+              <span><i class="fas fa-clock"></i> Duration: 7 Days</span>
+              <span
+                ><i class="fas fa-tag"></i> Category: Residential Roofing</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Project Gallery -->
+    <section class="project-gallery">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-8">
+            <div
+              id="projectCarousel"
+              class="carousel slide"
+              data-bs-ride="carousel"
+            >
+              <div class="carousel-indicators">
+                <button
+                  type="button"
+                  data-bs-target="#projectCarousel"
+                  data-bs-slide-to="0"
+                  class="active"
+                  aria-current="true"
+                  aria-label="Slide 1"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#projectCarousel"
+                  data-bs-slide-to="1"
+                  aria-label="Slide 2"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#projectCarousel"
+                  data-bs-slide-to="2"
+                  aria-label="Slide 3"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#projectCarousel"
+                  data-bs-slide-to="3"
+                  aria-label="Slide 4"
+                ></button>
+              </div>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img
+                    src="/assets/residential-project.png"
+                    class="d-block w-100"
+                    alt="Heritage Cottage Before"
+                  />
+                  <div class="carousel-caption d-none d-md-block">
+                    <h5>Original Heritage Cottage</h5>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="/assets/residential-project.png"
+                    class="d-block w-100"
+                    alt="Tile Restoration Process"
+                  />
+                  <div class="carousel-caption d-none d-md-block">
+                    <h5>Careful Restoration Process</h5>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="/assets/residential-project.png"
+                    class="d-block w-100"
+                    alt="Progress on Heritage Restoration"
+                  />
+                  <div class="carousel-caption d-none d-md-block">
+                    <h5>Heritage Character Preserved</h5>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="/assets/residential-project.png"
+                    class="d-block w-100"
+                    alt="Completed Heritage Restoration"
+                  />
+                  <div class="carousel-caption d-none d-md-block">
+                    <h5>Authentic Restoration Complete</h5>
+                  </div>
+                </div>
+              </div>
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#projectCarousel"
+                data-bs-slide="prev"
+              >
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#projectCarousel"
+                data-bs-slide="next"
+              >
+                <span
+                  class="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="project-info-card">
+              <h3>Project Overview</h3>
+              <p>
+                Authentic restoration of a 1920s heritage cottage roof in
+                Newcastle's historic precinct. This project required specialized
+                techniques to preserve the original character while upgrading
+                performance to modern standards.
+              </p>
+
+              <h4>Services Provided</h4>
+              <ul>
+                <li>Heritage-compliant terracotta tile restoration</li>
+                <li>Original timber repair and reinforcement</li>
+                <li>Traditional lime mortar repointing</li>
+                <li>Heritage-approved weatherproofing</li>
+                <li>Period-appropriate ventilation solutions</li>
+              </ul>
+
+              <!-- <div class="cta-box">
+                <h4>Heritage Property Owner?</h4>
+                <p>We specialize in heritage-compliant roofing solutions.</p>
+                <a
+                  href="/roofing-protoV3/html-files/"
+                  class="btn btn-primary w-100"
+                  >Get A Quote</a
+                >
+              </div> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Project Details Content -->
+    <section class="project-details">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8">
+            <!-- Challenge -->
+            <div class="detail-section">
+              <h3>
+                <i class="fas fa-exclamation-triangle me-2"></i> The Challenge
+              </h3>
+              <p>
+                This beautiful 1920s heritage cottage presented unique
+                challenges that required specialized expertise:
+              </p>
+              <ul>
+                <li>
+                  Many original terracotta tiles were cracked or damaged from
+                  decades of weathering
+                </li>
+                <li>
+                  Traditional lime mortar pointing had deteriorated, causing
+                  leaks and structural concerns
+                </li>
+                <li>
+                  Heritage listing restrictions required authentic materials and
+                  traditional techniques
+                </li>
+                <li>
+                  Original timber battens showed signs of age but needed to
+                  maintain structural integrity
+                </li>
+                <li>
+                  Modern weatherproofing needed to be integrated without
+                  compromising historic authenticity
+                </li>
+              </ul>
+              <p>
+                The homeowners were passionate about preserving the cottage's
+                original character while ensuring it would remain watertight and
+                structurally sound for generations to come.
+              </p>
+            </div>
+
+            <!-- Solution -->
+            <div class="detail-section">
+              <h3><i class="fas fa-lightbulb me-2"></i> Our Solution</h3>
+              <p>
+                Working closely with heritage consultants and local council
+                requirements, we developed a comprehensive restoration plan:
+              </p>
+              <ol>
+                <li>
+                  <strong>Heritage Assessment:</strong> Detailed documentation
+                  of existing materials and techniques to ensure authentic
+                  restoration methods.
+                </li>
+                <li>
+                  <strong>Tile Sourcing:</strong> Matching original terracotta
+                  tiles through specialized heritage suppliers for seamless
+                  repairs.
+                </li>
+                <li>
+                  <strong>Traditional Techniques:</strong> Using lime-based
+                  mortars and traditional laying methods consistent with 1920s
+                  construction.
+                </li>
+                <li>
+                  <strong>Selective Repairs:</strong> Careful restoration of
+                  salvageable tiles while replacing only those beyond repair.
+                </li>
+                <li>
+                  <strong>Structural Reinforcement:</strong> Strengthening
+                  original timber framework using period-appropriate materials
+                  and methods.
+                </li>
+                <li>
+                  <strong>Heritage Compliance:</strong> Ensuring all work met
+                  strict heritage overlay requirements while improving
+                  performance.
+                </li>
+              </ol>
+              <p>
+                Our approach balanced preservation of historic character with
+                practical improvements to ensure long-term durability and
+                weather resistance.
+              </p>
+            </div>
+
+            <!-- Execution -->
+            <div class="detail-section">
+              <h3><i class="fas fa-cogs me-2"></i> The Execution</h3>
+              <p>
+                This specialized restoration required careful planning and
+                traditional craftsmanship:
+              </p>
+
+              <h4>Day 1-2: Assessment and Preparation</h4>
+              <p>
+                We began with careful documentation and numbering of tiles to
+                preserve the original laying pattern. Each tile was individually
+                assessed for restoration potential, with careful removal and
+                storage of salvageable pieces.
+              </p>
+
+              <h4>Day 3-4: Structural Repairs</h4>
+              <p>
+                Original timber battens were selectively repaired and reinforced
+                using traditional techniques. Where replacement was necessary,
+                we used reclaimed timber matching the original specifications
+                and age characteristics.
+              </p>
+
+              <h4>Day 5-6: Tile Restoration and Installation</h4>
+              <p>
+                Restored tiles were reinstalled using traditional lime mortars
+                mixed to period-appropriate specifications. New tiles, carefully
+                matched for color and texture, were integrated seamlessly with
+                the originals.
+              </p>
+
+              <h4>Day 7: Finishing and Weatherproofing</h4>
+              <p>
+                Traditional lime mortar pointing was completed, and discreet
+                modern weatherproofing elements were integrated in ways that
+                remained invisible but enhanced the roof's performance.
+              </p>
+
+              <p>
+                Throughout the process, we maintained constant dialogue with the
+                heritage consultant to ensure every detail met strict
+                preservation standards.
+              </p>
+            </div>
+
+            <!-- Results -->
+            <div class="detail-section">
+              <h3><i class="fas fa-trophy me-2"></i> The Results</h3>
+              <p>
+                The completed heritage restoration achieved outstanding results:
+              </p>
+              <ul>
+                <li>
+                  Perfect preservation of the cottage's 1920s character and
+                  street appeal
+                </li>
+                <li>
+                  Complete elimination of leaks while using only
+                  heritage-approved methods
+                </li>
+                <li>
+                  Enhanced structural integrity using traditional reinforcement
+                  techniques
+                </li>
+                <li>
+                  Full heritage compliance with council and consultant approval
+                </li>
+                <li>
+                  Extended roof lifespan of 40+ years with authentic materials
+                </li>
+                <li>
+                  Increased property value while maintaining heritage
+                  authenticity
+                </li>
+              </ul>
+              <p>
+                The project received recognition from the local heritage society
+                for its authentic restoration approach and has become a
+                reference example for similar heritage projects in the area.
+              </p>
+
+              <blockquote class="client-quote">
+                <p>
+                  "Pav's Roofing showed incredible respect for our cottage's
+                  history. They took the time to understand heritage
+                  requirements and delivered a restoration that looks like it
+                  was done 100 years ago - but with the reliability of modern
+                  craftsmanship. We couldn't be happier with the authentic
+                  result."
+                </p>
+                <footer>
+                  - Margaret and Robert H., Heritage Property Owners
+                </footer>
+              </blockquote>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <!-- Materials Used -->
+            <div class="sidebar-widget">
+              <h3>Materials Used</h3>
+              <ul class="materials-list">
+                <li>
+                  <i class="fas fa-check-circle me-2"></i> Matching terracotta
+                  tiles
+                </li>
+                <li>
+                  <i class="fas fa-check-circle me-2"></i> Traditional lime
+                  mortar
+                </li>
+                <li>
+                  <i class="fas fa-check-circle me-2"></i> Reclaimed timber
+                  battens
+                </li>
+                <li>
+                  <i class="fas fa-check-circle me-2"></i> Heritage-approved
+                  flashing
+                </li>
+                <li>
+                  <i class="fas fa-check-circle me-2"></i> Period-appropriate
+                  fixings
+                </li>
+                <li>
+                  <i class="fas fa-check-circle me-2"></i> Natural fiber
+                  pointing
+                </li>
+              </ul>
+            </div>
+
+            <!-- Benefits -->
+            <div class="sidebar-widget">
+              <h3>Project Benefits</h3>
+              <div class="benefit-item">
+                <div class="benefit-icon">
+                  <i class="fas fa-landmark"></i>
+                </div>
+                <div class="benefit-text">
+                  <h4>Heritage Compliance</h4>
+                  <p>
+                    Fully approved restoration meeting all heritage requirements
+                  </p>
+                </div>
+              </div>
+              <div class="benefit-item">
+                <div class="benefit-icon">
+                  <i class="fas fa-palette"></i>
+                </div>
+                <div class="benefit-text">
+                  <h4>Authentic Character</h4>
+                  <p>Original 1920s appearance perfectly preserved</p>
+                </div>
+              </div>
+              <div class="benefit-item">
+                <div class="benefit-icon">
+                  <i class="fas fa-shield-alt"></i>
+                </div>
+                <div class="benefit-text">
+                  <h4>Enhanced Durability</h4>
+                  <p>Modern performance with traditional materials</p>
+                </div>
+              </div>
+              <div class="benefit-item">
+                <div class="benefit-icon">
+                  <i class="fas fa-gem"></i>
+                </div>
+                <div class="benefit-text">
+                  <h4>Increased Value</h4>
+                  <p>Heritage properties with authentic restoration premium</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Similar Projects -->
+            <div class="sidebar-widget">
+              <h3>Similar Projects</h3>
+              <div class="similar-projects">
+                <a
+                  href="./project-details-residential1.html"
+                  class="similar-project"
+                >
+                  <img
+                    src="/assets/residential-project.png"
+                    alt="Modern Family Home"
+                    class="img-fluid"
+                  />
+                  <h4>Modern Family Home</h4>
+                  <p>Sydney, NSW</p>
+                </a>
+                <a
+                  href="./project-details-residential3.html"
+                  class="similar-project"
+                >
+                  <img
+                    src="/assets/residential-project.png"
+                    alt="Coastal Villa"
+                    class="img-fluid"
+                  />
+                  <h4>Coastal Villa</h4>
+                  <p>Wollongong, NSW</p>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta">
+      <div class="container text-center">
+        <h2>Heritage Property Restoration Specialist</h2>
+        <p>
+          Trust your heritage property to specialists who understand both
+          traditional techniques and modern requirements. Contact us for expert
+          heritage roofing solutions.
+        </p>
+        <a href="/roofing-protoV3/html-files/" class="btn btn-light btn-lg"
+          >Get A Heritage Quote</a
+        >
+      </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+      <div id="footer-placeholder"></div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <div class="scroll-to-top" id="scrollToTop">
+      <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="/js-files/index.js"></script>
+    <script src="/js-files/nav.js"></script>
+    <script src="/js-files/footer.js"></script>
+    <script src="/project-files/js-files/project-details.js"></script>
+  </body>
+</html>

@@ -2,25 +2,21 @@ document.addEventListener("DOMContentLoaded", () => {
   const navbarPlaceholder = document.getElementById("navbar-placeholder");
 
   if (navbarPlaceholder) {
-    // For GitHub Pages, include the repository name in the path
     fetch("/html-files/nav.html")
       .then(response => {
         if (!response.ok) {
-          // Try a relative path as fallback
           return fetch("./html-files/nav.html");
         }
         return response;
       })
       .then(response => {
         if (!response.ok) {
-          // Try another relative path as a secondary fallback
           return fetch("../html-files/nav.html");
         }
         return response;
       })
       .then(response => {
         if (!response.ok) {
-          // Try another relative path as a secondary fallback
           return fetch("../../html-files/nav.html");
         }
         return response;
@@ -34,7 +30,6 @@ document.addEventListener("DOMContentLoaded", () => {
       .then(data => {
         navbarPlaceholder.innerHTML = data;
 
-        // Highlight the active link
         const currentPath = window.location.pathname;
         const navLinks = document.querySelectorAll(".navbar-nav .nav-link");
 
@@ -46,7 +41,6 @@ document.addEventListener("DOMContentLoaded", () => {
           }
         });
 
-        // Dispatch a custom event to notify other scripts that the navbar is loaded
         document.dispatchEvent(new CustomEvent('navbarLoaded'));
       })
       .catch(error => {

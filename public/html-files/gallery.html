@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project Gallery | Pav's Roofing Solutions</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css-files/styles.css" />
+    <link rel="stylesheet" href="/css-files/nav.css" />
+    <link rel="stylesheet" href="/css-files/gallery.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="/assets/transparent-logo-removebg-lite.png"
+    />
+    <link
+      rel="shortcut icon"
+      href="/assets/transparent-logo-removebg-lite.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/assets/transparent-logo-removebg-lite.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/assets/transparent-logo-removebg-lite.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/assets/transparent-logo-removebg-lite.png"
+    />
+  </head>
+  <body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8">
+            <i class="fas fa-phone-alt me-2"></i>
+            <a href="tel:0412345678">0412 345 678</a>
+            <span class="mx-3">|</span>
+            <i class="fas fa-envelope me-2"></i>
+            <a href="mailto:info@pavsroofing.com.au">info@pavsroofing.com.au</a>
+          </div>
+          <div class="col-md-4 text-md-end">
+            <div class="social-icons top-social-icons">
+              <a href="https://www.facebook.com/pavsroofing"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a href="https://www.instagram.com/pavsroofing"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="https://www.linkedin.com/company/pavsroofing"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Header/Navigation -->
+    <header class="sticky-top">
+      <div id="navbar-placeholder"></div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h1>Our Project Gallery</h1>
+            <!-- <nav aria-label="breadcrumb">
+              <ol class="breadcrumb justify-content-center">
+                <li class="breadcrumb-item"><a href="/roofing-protoV3/">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Gallery</li>
+              </ol>
+            </nav> -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery-section">
+      <div class="container">
+        <div class="row mb-4">
+          <div class="col-lg-8">
+            <h2 class="section-title">Our Roofing Projects</h2>
+            <p>
+              Browse through our collection of completed roofing projects
+              showcasing our quality workmanship, attention to detail, and the
+              transformations we've created for our clients.
+            </p>
+          </div>
+          <div class="col-lg-4">
+            <div class="gallery-filters text-lg-end">
+              <button class="btn btn-outline-primary active" data-filter="all">
+                All Projects
+              </button>
+              <button class="btn btn-outline-primary" data-filter="replacement">
+                Replacements
+              </button>
+              <button class="btn btn-outline-primary" data-filter="repair">
+                Repairs
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="row gallery-container">
+          <!-- Gallery Images -->
+          <div
+            class="col-md-3 col-sm-6 gallery-item"
+            data-category="replacement"
+          >
+            <div class="gallery-thumbnail" data-index="0">
+              <img
+                src="/assets/residential-project.png"
+                alt="Tile Roof Replacement"
+                class="img-fluid"
+              />
+              <div class="gallery-caption">
+                <h5>Tile Roof Replacement</h5>
+                <p>North Sydney</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-3 col-sm-6 gallery-item" data-category="repair">
+            <div class="gallery-thumbnail" data-index="1">
+              <img
+                src="/assets/metal-project.png"
+                alt="Metal Roof Repair"
+                class="img-fluid"
+              />
+              <div class="gallery-caption">
+                <h5>Metal Roof Repair</h5>
+                <p>Parramatta</p>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="col-md-3 col-sm-6 gallery-item"
+            data-category="replacement"
+          >
+            <div class="gallery-thumbnail" data-index="2">
+              <img
+                src="/assets/residential-project.png"
+                alt="Modern Home Roof"
+                class="img-fluid"
+              />
+              <div class="gallery-caption">
+                <h5>Modern Home Roof</h5>
+                <p>Eastern Suburbs</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-3 col-sm-6 gallery-item" data-category="repair">
+            <div class="gallery-thumbnail" data-index="3">
+              <img
+                src="/assets/residential-project.png"
+                alt="Gutter Replacement"
+                class="img-fluid"
+              />
+              <div class="gallery-caption">
+                <h5>Gutter Replacement</h5>
+                <p>Inner West</p>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="col-md-3 col-sm-6 gallery-item"
+            data-category="replacement"
+          >
+            <div class="gallery-thumbnail" data-index="4">
+              <img
+                src="/assets/metal-project.png"
+                alt="Complete Roof Overhaul"
+                class="img-fluid"
+              />
+              <div class="gallery-caption">
+                <h5>Complete Roof Overhaul</h5>
+                <p>Northern Beaches</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-3 col-sm-6 gallery-item" data-category="repair">
+            <div class="gallery-thumbnail" data-index="5">
+              <img
+                src="/assets/residential-project.png"
+                alt="Leak Repair"
+                class="img-fluid"
+              />
+              <div class="gallery-caption">
+                <h5>Leak Repair</h5>
+                <p>Western Sydney</p>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="col-md-3 col-sm-6 gallery-item"
+            data-category="replacement"
+          >
+            <div class="gallery-thumbnail" data-index="6">
+              <img
+                src="/assets/metal-project.png"
+                alt="Heritage Home Restoration"
+                class="img-fluid"
+              />
+              <div class="gallery-caption">
+                <h5>Heritage Home Restoration</h5>
+                <p>The Rocks</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-3 col-sm-6 gallery-item" data-category="repair">
+            <div class="gallery-thumbnail" data-index="7">
+              <img
+                src="/assets/residential-project.png"
+                alt="Storm Damage Repair"
+                class="img-fluid"
+              />
+              <div class="gallery-caption">
+                <h5>Storm Damage Repair</h5>
+                <p>South Sydney</p>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="col-md-3 col-sm-6 gallery-item"
+            data-category="replacement"
+          >
+            <div class="gallery-thumbnail" data-index="8">
+              <img
+                src="/assets/metal-project.png"
+                alt="Terrace Home Roof"
+                class="img-fluid"
+              />
+              <div class="gallery-caption">
+                <h5>Terrace Home Roof</h5>
+                <p>Surry Hills</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-3 col-sm-6 gallery-item" data-category="repair">
+            <div class="gallery-thumbnail" data-index="9">
+              <img
+                src="/assets/residential-project.png"
+                alt="Ridge Cap Repair"
+                class="img-fluid"
+              />
+              <div class="gallery-caption">
+                <h5>Ridge Cap Repair</h5>
+                <p>Lane Cove</p>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="col-md-3 col-sm-6 gallery-item"
+            data-category="replacement"
+          >
+            <div class="gallery-thumbnail" data-index="10">
+              <img
+                src="/assets/residential-project.png"
+                alt="Coastal Home Roof"
+                class="img-fluid"
+              />
+              <div class="gallery-caption">
+                <h5>Coastal Home Roof</h5>
+                <p>Manly</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-3 col-sm-6 gallery-item" data-category="repair">
+            <div class="gallery-thumbnail" data-index="11">
+              <img
+                src="/assets/metal-project.png"
+                alt="Flashing Repair"
+                class="img-fluid"
+              />
+              <div class="gallery-caption">
+                <h5>Flashing Repair</h5>
+                <p>Hornsby</p>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="col-md-3 col-sm-6 gallery-item"
+            data-category="replacement"
+          >
+            <div class="gallery-thumbnail" data-index="12">
+              <img
+                src="/assets/residential-project.png"
+                alt="Family Home Roof"
+                class="img-fluid"
+              />
+              <div class="gallery-caption">
+                <h5>Family Home Roof</h5>
+                <p>Castle Hill</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-3 col-sm-6 gallery-item" data-category="repair">
+            <div class="gallery-thumbnail" data-index="13">
+              <img
+                src="/assets/metal-project.png"
+                alt="Valley Repair"
+                class="img-fluid"
+              />
+              <div class="gallery-caption">
+                <h5>Valley Repair</h5>
+                <p>Ryde</p>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="col-md-3 col-sm-6 gallery-item"
+            data-category="replacement"
+          >
+            <div class="gallery-thumbnail" data-index="14">
+              <img
+                src="/assets/residential-project.png"
+                alt="Eco-Friendly Roof"
+                class="img-fluid"
+              />
+              <div class="gallery-caption">
+                <h5>Eco-Friendly Roof</h5>
+                <p>Blue Mountains</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-3 col-sm-6 gallery-item" data-category="repair">
+            <div class="gallery-thumbnail" data-index="15">
+              <img
+                src="/assets/metal-project.png"
+                alt="Tile Repair"
+                class="img-fluid"
+              />
+              <div class="gallery-caption">
+                <h5>Tile Repair</h5>
+                <p>Macquarie Park</p>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="col-md-3 col-sm-6 gallery-item"
+            data-category="replacement"
+          >
+            <div class="gallery-thumbnail" data-index="16">
+              <img
+                src="/assets/residential-project.png"
+                alt="Modern Apartment Complex"
+                class="img-fluid"
+              />
+              <div class="gallery-caption">
+                <h5>Modern Apartment Complex</h5>
+                <p>Chatswood</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-3 col-sm-6 gallery-item" data-category="repair">
+            <div class="gallery-thumbnail" data-index="17">
+              <img
+                src="/assets/metal-project.png"
+                alt="Skylight Installation"
+                class="img-fluid"
+              />
+              <div class="gallery-caption">
+                <h5>Skylight Installation</h5>
+                <p>Blacktown</p>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="col-md-3 col-sm-6 gallery-item"
+            data-category="replacement"
+          >
+            <div class="gallery-thumbnail" data-index="18">
+              <img
+                src="/assets/residential-project.png"
+                alt="Victorian House Roof"
+                class="img-fluid"
+              />
+              <div class="gallery-caption">
+                <h5>Victorian House Roof</h5>
+                <p>Paddington</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-3 col-sm-6 gallery-item" data-category="repair">
+            <div class="gallery-thumbnail" data-index="19">
+              <img
+                src="/assets/metal-project.png"
+                alt="Chimney Repair"
+                class="img-fluid"
+              />
+              <div class="gallery-caption">
+                <h5>Chimney Repair</h5>
+                <p>Newtown</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Lightbox Modal -->
+    <div class="lightbox-modal">
+      <div class="lightbox-container">
+        <div class="lightbox-content">
+          <img src="" alt="" class="lightbox-image" />
+          <div class="lightbox-caption">
+            <h3 class="lightbox-title"></h3>
+            <p class="lightbox-location"></p>
+          </div>
+        </div>
+        <button class="lightbox-close">&times;</button>
+        <button class="lightbox-prev">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        <button class="lightbox-next">
+          <i class="fas fa-chevron-right"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Call To Action Section -->
+    <section class="cta">
+      <div class="container text-center">
+        <h2>Ready to Transform Your Roof?</h2>
+        <p>
+          Contact us today for a free, no-obligation quote and experience the
+          personalized service that only a dedicated local team can provide.
+        </p>
+        <a href="/roofing-protoV3/html-files/" class="btn btn-light btn-lg"
+          >Get A Free Quote</a
+        >
+      </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+      <div id="footer-placeholder"></div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <div class="scroll-to-top" id="scrollToTop">
+      <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="/js-files/index.js"></script>
+    <script src="/js-files/nav.js"></script>
+    <script src="/js-files/footer.js"></script>
+    <script src="/js-files/gallery.js"></script>
+  </body>
+</html>
