@@ -1,6 +1,6 @@
 <h1>>Roofing ProtoV3</h1>
 
-Viewable here -> https://scotty-wkc.github.io/roofing-protoV3/
+Viewable here -> https://scotty-wkc.github.io/pav-roofing-custom-write-V3/
 
 Welcome to Roofing ProtoV3! This project is the third version of a roofing website, built using HTML, CSS, JavaScript, and the Bootstrap framework. This version introduces new features, better performance, and an improved user experience.
 
@@ -28,7 +28,7 @@ Clone the repository:
 bash
 Copy
 Edit
-git clone https://github.com/scotty-wkc/roofing-protoV3.git
+git clone https://github.com/scotty-wkc/pav-roofing-custom-write-V3.git
 Navigate to the project directory:
 
 bash
