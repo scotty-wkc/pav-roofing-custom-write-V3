@@ -3,6 +3,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (navbarPlaceholder) {
     fetch("/html-files/nav.html")
+    .then(response => {
+        if (!response.ok) {
+          return fetch("/public/html-files/nav.html");
+        }
+        return response;
+      })
       .then(response => {
         if (!response.ok) {
           return fetch("./html-files/nav.html");
